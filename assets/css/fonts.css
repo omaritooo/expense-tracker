@@ -101,3 +101,7 @@
     font-weight: 800;
     font-style: italic;
 }
+
+* {
+    font-family: 'Poppins', 'sans-serif';
+}

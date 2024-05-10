@@ -17,19 +17,18 @@ export default defineNuxtConfig({
       },
     },
   },
-   runtimeConfig: {
+  runtimeConfig: {
     public: {
       KEY: process.env.SUPABASE_KEY,
- 
     },
   },
   css: ["~/assets/css/fonts.css"],
- supabase: {
+  supabase: {
     url: process.env.SUPABASE_URL,
     key: process.env.SUPABASE_KEY
   },
   modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt", "shadcn-nuxt", "@nuxtjs/supabase",
-],
+  ],
   shadcn: {
     /**
      * Prefix for all the imported component
