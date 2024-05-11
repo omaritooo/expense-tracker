@@ -12,9 +12,8 @@ export default defineNuxtPlugin((nuxtApp) => {
 
     const apiFecther = $fetch.create(fetchOptions);
 
-    // An object containing all repositories we need to expose
     const modules = {
-        products: new AuthRepository(apiFecther),
+        auth: new AuthRepository(apiFecther),
     };
 
     return {
