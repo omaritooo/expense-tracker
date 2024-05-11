@@ -16,8 +16,26 @@ export class AuthRepository extends FetchFactory<any> {
                     }
                 };
                 return this.call(
-                    'GET',
+                    'POST',
                     `${this.prefix}/register`,
+                    body,
+                    fetchOptions
+                )
+            },
+            asyncDataOptions
+        )
+    };
+    async login(asyncDataOptions: AsyncDataOptions<any>, body: any) {
+        return useAsyncData(
+            () => {
+                const fetchOptions: FetchOptions<'json'> = {
+                    headers: {
+                        'Accept-Language': 'en-US'
+                    }
+                };
+                return this.call(
+                    'POST',
+                    `${this.prefix}/login`,
                     body,
                     fetchOptions
                 )

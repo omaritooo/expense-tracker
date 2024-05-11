@@ -33,20 +33,5 @@ export default defineEventHandler(async (event) => {
     return err
   }
 
-  // if (error) throw error;
-  // console.log(data?.user?.id);
-  // if (userAuth.value) {
-  //   const userCreds = {
-  //     id: userAuth.value.id,
-  //     username: user.username,
-  //     full_name: `${user.firstName} ${user.lastName}`,
-  //   };
-  //   const { data: userData, error: userError } = await client
-  //     .from("profiles")
-  //     .upsert(userCreds)
-  //     .single();
-  //   console.log(userData);
-  //   if (userError) throw userError;
-  // console.log(readBody(event))
-  return readBody(event)
+
 })
