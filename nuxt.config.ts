@@ -17,6 +17,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  plugins: ['./plugins/api.ts'],
   runtimeConfig: {
     public: {
       KEY: process.env.SUPABASE_KEY,
